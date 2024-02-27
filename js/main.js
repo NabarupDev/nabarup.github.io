@@ -17,6 +17,14 @@
   });
 
 
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+document.addEventListener('selectstart', (e) => {
+    e.preventDefault();
+});
+
+
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
@@ -39,12 +47,8 @@
 
 	// Scrollax
    $.Scrollax();
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-});
-document.addEventListener('selectstart', (e) => {
-    e.preventDefault();
-});
+
+
 
    // Burger Menu
 	var burgerMenu = function() {
