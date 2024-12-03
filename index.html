@@ -18,19 +18,23 @@
 
 	<link rel="stylesheet" href="css/aos.css">
 
+	<link rel="stylesheet" href="css/faltu-test.css">
+
 	<link rel="stylesheet" href="css/ionicons.min.css">
 
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Site Metas -->
+	<meta name="keywords"
+		content="Java, XML, API, Android SDK, HTML, CSS, JavaScript, PHP, Responsive Design, RESTful API Development, Firebase, GitHub, Android Studio, Visual Studio Code, Computer Science, Engineering, B.Tech, CSE, CST, Web Development, App Development, Tableau">
+	<meta name="description"
+		content="Portfolio of a second-year B.Tech student majoring in Computer Science Engineering (CSE) with expertise in Java for Android app development, web development, and Tableau.">
+	<meta name="author" content="Nabarup Roy" />
 
 
 	<style>
-		/*======================================
-//--//-->   ABOUT
-======================================*/
-
 		.about-mf .box-shadow-full {
 			padding-top: 4rem;
 			padding-bottom: 4rem;
@@ -57,6 +61,25 @@
 			background-color: #ffbd39;
 		}
 
+
+		.block-20::before {
+			content: attr(data-alt);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			/* Set text color to white */
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 10px;
+			border-radius: 5px;
+			display: none;
+			text-align: center;
+		}
+
+		.block-20:empty::before {
+			display: block;
+		}
 
 		/* Animation styles */
 		#typing-animation {
@@ -111,6 +134,56 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
+
+		/* adjustments for any type of message,
+        should be overriden in Semantic */
+		.ui.message {
+			box-shadow: none !important;
+			color: #2c2c2c !important;
+		}
+
+		/* color adjustments specifically for the positive message,
+        should be overriden in Semantic */
+		.ui.positive.message {
+			background-color: #ffffff, #97cb50, 70%;
+		}
+
+		/* adjustments for close icon */
+		.close {
+			color: fadeout(#2c2c2c, 60%);
+
+			&:hover {
+				color: fadeout#2c2c2c, 40%;
+			}
+		}
+
+		.fa-check-circle {
+			font-size: 14px;
+			position: relative;
+			bottom: 1px;
+			margin-right: 4px;
+			opacity: 0.75;
+		}
+
+		/* Ignore this, this is just to make CodePen look nice :) */
+		.msgs {
+			display: flex;
+			flex-direction: column;
+			width: 500px;
+			height: 800px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			margin-top: 128px;
+		}
+
+		.msg-container {
+			position: relative;
+			height: 200px;
+		}
 	</style>
 
 
@@ -146,7 +219,7 @@
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
 						data-scrollax-parent="true">
 						<div class="one-third js-fullheight order-md-last img"
-							style="background-image:url(images/bg_1.png);">
+							style="background-image:url(images/bg_1.png);" data-alt="Background image failed to load">
 							<div class="overlay"></div>
 						</div>
 						<div class="one-forth d-flex  align-items-center ftco-animate"
@@ -155,7 +228,7 @@
 								<span class="subheading">Hello!</span>
 								<h1 class="mb-4 mt-3">I'm <span>Nabarup Roy</span></h1>
 
-								<!-- Element to contain animated typing -->
+								<!-- animated typing -->
 								<span id="typing-animation"></span>
 
 								<script>
@@ -163,10 +236,10 @@
 									// Initialize the typing animation
 									const typingAnimationElement = document.getElementById('typing-animation');
 
-									// Create an array of typing text
+
 									const typingTexts = [
-										'Engineer  ',
-										'YouTuber  ',
+										'Android Developer  ',
+										'Full-stack Developer   ',
 										'Student   ',
 									];
 
@@ -193,12 +266,13 @@
 
 								<br>
 								<br>
-								<h2>An Android App Developer</h2>
+								<h2>An Android App Developer & <br>Full-stack Developer</h2>
 								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 								<!-- <br> -->
-								<p><a href="https://youtube.com/@nr_developer?si=zELf_YgvtMRjLIa8"
-										class="btn btn-primary py-3 px-4">YouTube</a>
-									<a href="https://github.com/nabarup87"
+								<p>
+									<!-- <a href="https://youtube.com/@nr_developer?si=zELf_YgvtMRjLIa8"
+										class="btn btn-primary py-3 px-4">YouTube</a> -->
+									<a href="https://github.com/NabarupDev"
 										class="btn btn-white btn-outline-white py-3 px-4">My works</a>
 								</p>
 							</div>
@@ -208,7 +282,6 @@
 			</div>
 		</div>
 	</section>
-
 
 
 	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
@@ -222,39 +295,43 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 										<div class="about-img">
-											<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+											<img src="images/about-me.png" class="img-fluid rounded b-shadow-a"
+												alt="Nabarup Roy">
 										</div>
 									</div>
 									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
-										<div class="about-info">
+										<div class="about-info" style="margin-left: 10px; margin-top: 10px;">
 											<p><span class="title-s">Name: </span> <span>Nabarup Roy</span></p>
-											<p><span class="title-s">Job Role: </span> <span>Android App
-													Developer</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Android Developer & <br>Full-stack Developer</span></p>
 											<p><span class="title-s">Experience: </span> <span>Fresher</span>
 											</p>
-											<p><span class="title-s">Address: </span> <span>Siliguri, India</span></p>
+											<p><span class="title-s">Address: </span> <span>Kolkata, India</span></p>
 										</div>
 									</div>
 								</div>
 
 								<div class="skill-mf">
 									<p class="title-s">Skills</p>
-									<span>‣ &nbsp Java</span>
+									<span aria-label="Java, XML, API, Android SDK" style="margin-left: 10px;">‣ &nbsp
+										Java, XML, API, Android SDK</span>
 									<!-- <div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 95%;"
 											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
 									</div> -->
 									<br>
 									<br>
-									<span>‣ &nbsp HTML</span>
+									<span aria-label="HTML, CSS, JavaScript, PHP, Responsive Design"
+										style="margin-left: 10px;">‣ &nbsp HTML, CSS, JavaScript, PHP, Responsive
+										Design</span>
 									<br>
 									<br>
-									<span>‣ &nbsp CSS</span>
+									<span aria-label="RESTful API Development, Firebase, GitHub"
+										style="margin-left: 10px;">‣ &nbsp RESTful API Development, Firebase,
+										GitHub</span>
+									<!-- <br>
 									<br>
-									<br>
-
-									<span>‣ &nbsp JS</span>
+									<span>‣ &nbsp Android Studio,Visual Studio Code </span> -->
 								</div>
 							</div>
 						</div>
@@ -267,20 +344,23 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 
-								<p>Currently a final-year diploma student with expertise in Java for Android app
-									projects, web development, and Tableau, I draw upon essential knowledge acquired
-									from my studies in the Computer Science Technology (CST) department. I have also
-									integrated additional insights from your site, catering to the specific needs of a
-									diploma student who has successfully completed the CST program.</p>
+								<p>I am currently a second-year B.Tech student majoring in Computer Science Engineering
+									(CSE), with expertise in Java for Android app development, web development, and
+									Tableau. My coursework has provided me with a strong foundation in these areas.
+									Additionally, I hold a diploma in Computer Science and Technology (CST), which has
+									further enhanced my technical skills and professional knowledge. Combined with
+									insights gained from various resources, my academic background has well-prepared me
+									to tackle challenges in the technology field.</p>
 								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Android App Developer</span>
+									<li class="d-flex"><span>Profile:</span> <span>Android App Developer & Full-stack
+											Developer</span>
 									</li>
-									<li class="d-flex"><span>Education:</span> <span>Diploma of Engineering</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
 									<li class="d-flex"><span>Language:</span> <span>Bengali, Hindi, English</span></li>
 									<li class="d-flex"><span>Other Skills:</span> <span> Android Studio and Visual
 											Studio Code &amp; Tableau</span></li>
 									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography,
-											Online Gameing</span></li>
+											Online Gaming</span></li>
 
 								</ul>
 							</div>
@@ -290,7 +370,7 @@
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
 							<div class="text">
 								<p class="mb-4">
-									<span class="number" data-number="15">0</span> <span>+</span>
+									<span class="number" data-number="8">0</span> <span>+</span>
 									<span>&nbsp; Projects completed</span>
 								</p>
 								<p><a href="https://www.linkedin.com/in/nabarup-roy-1a5002252/"
@@ -312,10 +392,10 @@
 				<div class="col-md-10 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Resume</h1>
 					<h2 class="mb-4">Resume</h2>
-					<p>As a dedicated student in the Computer Science Technology (CST) department, I am actively engaged
-						in the pursuit of knowledge. With a focus on driving business strategies through data-driven
-						insights, my academic journey encompasses essential expertise in data science, statistical
-						analysis, machine learning algorithms, and effective project management.</p>
+					<p>As a dedicated student in the Computer Science Engineering (CSE) department, I am actively
+						engaged in the pursuit of knowledge. With a focus on driving business strategies through
+						data-driven insights, my academic journey encompasses essential expertise in data science,
+						statistical analysis, machine learning algorithms, and effective project management.</p>
 				</div>
 			</div>
 
@@ -334,6 +414,14 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-Present</span>
+						<h2>Bachelor of Technology</h2>
+						<span class="position">Techno India University</span>
+						<p class="mt-4">Grade: Not declared.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
 						<span class="date">2021-2024</span>
 						<h2>Diploma of Engineering</h2>
 						<span class="position">Siliguri Government Polytechnic</span>
@@ -344,27 +432,25 @@
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2022-2024</span>
 						<h2>Higher Secondary School</h2>
-						<span class="position">Open School</span>
-						<p class="mt-4">Grade: First class distinction.</p>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2020-2021</span>
-						<h2>Secondary School</h2>
-						<span class="position">Mathabhanga High School</span>
+						<span class="position">Raphael Academic & Voc. Schooll</span>
 						<p class="mt-4">Grade: First class distinction.</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="row justify-content-center mt-5">
-				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="Resume.pdf" download class="btn btn-primary py-4 px-5" target="_blank">Download CV</a>
+				<div class="cola-md-6 text-center ftco-animate">
+					<p><a href="Resumes/Full-stack_DEVELOPER_Nabarup_Roy.pdf" download class="btn btn-primary py-4 px-5" target="_blank">Full-Stack
+							Resume</a>
+					</p>
+				</div>
+				<div class="col-mda-6 text-center ftco-animate">
+					<p><a href="Resumes/Android_Developer_Nabarup_Roy.pdf" download class="btn btn-primary py-4 px-5" target="_blank">Android
+							Resume</a>
 					</p>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
@@ -382,41 +468,13 @@
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/nabarup87/Scientific-Calculator" class="block-20 zoom-effect"
-							style="background-image: url('images/proj_1.png');">
+						<a href="https://github.com/NabarupDev/resumebuilder.github.io" class="block-20 zoom-effect"
+							style="background-image: url('images/projects/proj_1.png');"
+							data-alt="Project image failed to load">
 						</a>
 						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/nabarup87/Scientific-Calculator">Advanced
-									Scientific Calculator Useing Java!</a></h3>
-							<style>
-								a {
-									text-decoration: none;
-								}
-
-								a:hover {
-									text-decoration: underline;
-								}
-							</style>
-
-							<p><a href="images/Scientific Calculator.apk" download="Scientific-Calculator.apk">Download
-									App</a>
-							</p>
-
-							<p>This is a versatile scientific calculator designed for everyday use. Perform basic
-								calculations, solve scientific equations, and breeze through math tasks effortlessly.
-								Your handy tool for quick and accurate calculations! </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/nabarup87/resumebuilder.github.io" class="block-20 zoom-effect"
-							style="background-image: url('images/proj_2.png');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-
-							<h3 class="heading"><a href="https://github.com/nabarup87/resumebuilder.github.io">Build
+							<h3 class="heading"><a href="https://github.com/NabarupDev/resumebuilder.github.io">Build
 									Your
 									Professional Resume Online</a></h3>
 							<style>
@@ -429,7 +487,7 @@
 								}
 							</style>
 
-							<p><a href="https://nabarup87.github.io/resumebuilder.github.io/" target="_blank">Go to
+							<p><a href="https://NabarupDev.github.io/resumebuilder.github.io/" target="_blank">Go to
 									site</a></p>
 
 							<p>Create your customized professional resume effortlessly with our online resume builder.
@@ -440,14 +498,119 @@
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/NabarupDev/resumebuilder.github.io" class="block-20 zoom-effect"
+							style="background-image: url('images/sms-img.png');"
+							data-alt="Project image failed to load">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NabarupDev/resumebuilder.github.io">Web-Based Bulk SMS
+									Sender with Admin
+									Panel</a></h3>
+							<style>
+								a {
+									text-decoration: none;
+								}
+
+								a:hover {
+									text-decoration: underline;
+								}
+							</style>
+
+							<p><a href="#">Site is under development</a>
+							</p>
+
+							<p>Developed a web-based Bulk SMS Sender with an admin panel for managing user credits and
+								permissions. Users can send bulk SMS to any number in the United States, United Kingdom,
+								India, Australia, Germany, France, Poland, and Singapore with varying credits. The
+								website is currently in development and will be available online soon. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://rrconsortium.in" class="block-20 zoom-effect" style="background-image: url('images/projects/proj_2.jpg');
+							" data-alt="Project image failed to load">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://rrconsortium.in" target="_blank">Front-End Web
+									Developer for RR Consortium</a></h3>
+							<style>
+								a {
+									text-decoration: none;
+								}
+
+								a:hover {
+									text-decoration: underline;
+								}
+							</style>
+
+							<p><a href="https://rrconsortium.in" target="_blank">Go to
+									site</a>
+							</p>
+
+							<p>Built a responsive, user-friendly website for RR Constancy using HTML, CSS, and
+								JavaScript, ensuring compatibility across all devices.Showcased the consultancy's
+								expertise and services, including land surveys, engineering
+								soil investigations, plan and design, testing services, and quantity calculations, with
+								a focus on professionalism and clarity.</p>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/NabarupDev/All-Apps/tree/main/Meme" class="block-20 zoom-effect"
+							style="background-image: url('images/projects/proj_4.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/NabarupDev/All-Apps/tree/main/Meme"
+									target="_blank">MEME APP</a></h3>
+							<style>
+								a {
+									text-decoration: none;
+								}
+
+								a:hover {
+									text-decoration: underline;
+								}
+							</style>
+
+							<p><a href="https://github.com/NabarupDev/All-Apps/tree/main/Meme"
+									target="_blank">Download
+									App</a>
+							</p>
+
+							<p>Developed a Meme Image App using the Reddit API, optimizing API integration and caching
+								techniques to improve meme loading speed by 40%. Implemented a user-friendly interface
+								with a 'Next' button for loading new memes and a 'Share' button to allow easy meme
+								sharing via supported apps. The app achieved a 95% success rate in loading memes across
+								various screen sizes and orientations, leading to a 20% increase in user satisfaction.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="https://github.com/nabarup87/Music-App" class="block-20 zoom-effect"
-							style="background-image: url('images/proj_3.png');">
+						<a href="https://github.com/NabarupDev/Music-App" class="block-20 zoom-effect"
+							style="background-image: url('images/projects/proj_5.png');"
+							data-alt="Project image failed to load">
 						</a>
 
 						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/nabarup87/Music-App">EInteractive
+							<h3 class="heading"><a href="https://github.com/NabarupDev/All-Apps/tree/main/Music-App"
+									target="_blank">EInteractive
 									Android Music Player</a></h3>
 
 							<style>
@@ -460,28 +623,28 @@
 								}
 							</style>
 
-							<p><a href="images/Music App.apk" download="Music App.apk">Download
+							<p><a href="https://github.com/NabarupDev/All-Apps/tree/main/Music-App"
+									target="_blank">Download
 									App</a>
 							</p>
-							<p>Experience the perfect blend of control and harmony with this immersive music player,
-								featuring dynamic volume adjustment and intuitive playback controls.</p>
+							<p>Increased user engagement by 25% by integrating a seamless music player feature using
+								Java, with a user-friendly interface for easy navigation and intuitive music playback
+								controls. Additionally, reduced app size by 30% and enhanced resource utilization by 25%
+								through the implementation of efficient storage management techniques, ensuring an
+								optimized and responsive user experience.</p>
 						</div>
 					</div>
 				</div>
-			</div>
-			<br>
-			<!-- added justify-content-center to center align the last two projects -->
-			<div class="row d-flex justify-content-center">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/nabarup87/Calculator" class="block-20 zoom-effect"
-							style="background-image: url('images/proj_4.png');">
+						<a href="https://github.com/NabarupDev/All-Apps/tree/main/SGP" class="block-20 zoom-effect"
+							style="background-image: url('images/projects/sgp.png');"
+							data-alt="Project image failed to load">
 						</a>
 						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/nabarup87/Calculator">Calculator
-									App</a></h3>
-
+							<h3 class="heading"><a href="https://github.com/NabarupDev/All-Apps/tree/main/SGP"
+									target="_blank"> File Sharing App for college</a></h3>
 							<style>
 								a {
 									text-decoration: none;
@@ -492,40 +655,19 @@
 								}
 							</style>
 
-							<p><a href="images/Calculator.apk" download="Calculator.apk">Download
+							<p><a href="https://github.com/NabarupDev/All-Apps/tree/main/SGP"
+									target="_blank">Download
 									App</a>
-							<p>Developed a versatile calculator application with a user-friendly interface, supporting
-								basic arithmetic operations for efficient mathematical calculations.
-							</p>
+							<p>Developed a secure file management system using Java and Firebase, enabling over 500
+								students to access and share files, which led to a 30% increase in student engagement
+								and collaboration. Implemented real-time upload functionality for admins to instantly
+								share images and PDFs with students, reducing file management time by 50% through the
+								integration of dynamic file handling features.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/nabarup87/Browser" class="block-20 zoom-effect"
-							style="background-image: url('images/proj_5.png');">
-						</a>
-						<div class="text mt-3 float-right d-block">
 
-							<h3 class="heading"><a href="https://github.com/nabarup87/Browser">Browser
-									App</a></h3>
-							<style>
-								a {
-									text-decoration: none;
-								}
 
-								a:hover {
-									text-decoration: underline;
-								}
-							</style>
-
-							<p><a href="images/Browser.apk" download="Browser.apk">Download
-									App</a>
-							<p>Designed and implemented a browser-based application with a focus on user-friendly
-								features and functionality for a seamless online experience.</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -544,7 +686,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="10">0</strong>
+							<strong class="number" data-number="8">0</strong>
 							<span>Projects</span>
 						</div>
 					</div>
@@ -552,7 +694,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="150">0</strong>
+							<strong class="number" data-number="0">0</strong>
 							<span>Cups of coffee</span>
 						</div>
 					</div>
@@ -568,7 +710,7 @@
 					<div class="heading">
 						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
 						<br>
-						<p><a href="https://github.com/nabarup87" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<p><a href="https://github.com/NabarupDev" class="btn btn-primary py-3 px-5">GitHub</a></p>
 					</div>
 				</div>
 			</div>
@@ -595,7 +737,7 @@
 							<span class="icon-map-signs"></span>
 						</div>
 						<h3 class="mb-4">Address</h3>
-						<p>Siliguri, India</p>
+						<p>Kolkata, India</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -604,7 +746,7 @@
 							<span class="icon-phone2"></span>
 						</div>
 						<h3 class="mb-4">Contact Number</h3>
-						<p><a href="tel://8768943180">+ 91 876 8943 180</a></p>
+						<p><a href="tel://+91876 8943 180">+ 91 876 8943 180</a></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -630,31 +772,43 @@
 					<br>
 					<br>
 					<div class="row justify-content-center">
-						<div class="col-md-7 ftco-animate text-center">
-							<h2>Have a<span> Question? </span> <a href="https://forms.gle/11mRF75To43riCK49"
-									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						<div class="col-md-7 ftco-animate text-center fadeInUp ftco-animated"
+							style="margin-right: 10px;margin-left: 10px;">
+							<h2>Have a<span> Question? </span></h2>
+							<form method="post" class="text-center">
+								<div class="form-group">
+									<input type="text" class="form-contol" name="name" placeholder="Your Name" required>
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-contol" name="email" placeholder="Your Email"
+										required>
+								</div>
+								<div class="form-group">
+									<textarea class="form-contol" name="message" rows="4" placeholder="Your Message"
+										required="" style="min-height: 150px;"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary py-3 px-5" style="margin-top: 10px;">Send
+									Message</button>
+							</form>
 						</div>
 					</div>
 					<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 						<li class="ftco-animate normal-txt">Find me on </li>
-						<li class="ftco-animate"><a
-								href="https://www.youtube.com/channel/UCrEi2b7_swbGMwLFgzzTU4Q"><span
-									class="icon-youtube"></span></a></li>
 						<li class="ftco-animate"><a href="https://www.linkedin.com/in/nabarup-roy-1a5002252/"><span
 									class="icon-linkedin"></span></a></li>
 						<li class="ftco-animate"><a href="https://twitter.com/Nabarup_Roy"><span
 									class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="https://www.instagram.com/dev_nabarup/"><span
+						<li class="ftco-animate"><a href="https://www.instagram.com/nabarup___roy/"><span
 									class="icon-instagram"></span></a></li>
 					</ul>
 					<br>
 				</div>
+
+
+
 			</div>
 	</section>
-
-
-
 
 	<footer class="ftco-footer ftco-section">
 		<div class="container">
@@ -693,6 +847,87 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<script src="config.js"></script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const form = document.querySelector('.text-center form');
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault(); // Prevent the default form submission
+				//console.log('Form submitted'); // Debugging line
+
+				// Extracting form data
+				const name = form.querySelector('input[name="name"]').value;
+				const email = form.querySelector('input[name="email"]').value;
+				const message = form.querySelector('textarea[name="message"]').value;
+
+				// Send data to Telegram
+				sendDataToTelegram(name, email, message)
+					.then(() => {
+						//console.log('Data sent to Telegram'); // Debugging line
+						// Show success toast message
+						showSuccessToast();
+						// Reset form after submission if needed
+						form.reset();
+					})
+					.catch(error => {
+						console.error('Error sending data:');
+						// Handle error here, such as displaying an error message to the user
+					});
+			});
+
+			function sendDataToTelegram(name, email, message) {
+				const telegramMessage = `𝙽𝙴𝚆 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝙵𝚁𝙾𝙼 𝙿𝙾𝚁𝚃𝙵𝙾𝙻𝙸𝙾:\n \n 𝑁𝑎𝑚𝑒: ${name}\n 𝑬𝒎𝒂𝒊𝒍: ${email}\n 𝑀𝑒𝑠𝑠𝑎𝑔𝑒: \n ${message}`;
+
+				// Replace 'YOUR_BOT_TOKEN' and 'YOUR_CHAT_ID' with your actual bot token and chat ID
+				const telegramURL = `https://api.telegram.org/bot6932902778:AAETU35HsohU5BxYSMCcx_clCLSmHTjLmnQ/sendMessage`;
+				const telegramData = new URLSearchParams();
+				telegramData.append('chat_id', '2047349310');
+				telegramData.append('text', telegramMessage);
+
+				return fetch(telegramURL, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
+					},
+					body: telegramData
+				})
+					.then(response => {
+						if (!response.ok) {
+							throw new Error('Failed to send message');
+						}
+					});
+			}
+
+			function showSuccessToast() {
+				//console.log('Showing success toast'); // Debugging line
+
+				const toast = document.createElement('div');
+				toast.classList.add('msgs');
+				toast.innerHTML = `
+            <div class="msg-container">
+                <div class="ui positive submit message">
+                    <i class="close close-positive icon"></i>
+                    <div class="header">
+                        <i class="fas fa-check-circle"></i> Success
+                    </div>
+                    <p>Message Sent Successfully!</p>
+                </div>
+            </div>
+        `;
+				document.body.appendChild(toast);
+				setTimeout(() => {
+					toast.remove();
+				}, 5000); // Remove the toast after 5 seconds
+			}
+		});
+
+	</script>
+
+
+
 
 </body>
 

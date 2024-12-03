@@ -17,6 +17,14 @@
   });
 
 
+  //document.addEventListener('contextmenu', (e) => {
+   // e.preventDefault();
+//});
+//document.addEventListener('selectstart', (e) => {
+   // e.preventDefault();
+//});
+
+
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
@@ -185,7 +193,7 @@
 				$('.number').each(function(){
 					var $this = $(this),
 						num = $this.data('number');
-						console.log(num);
+						//console.log(num);
 					$this.animateNumber(
 					  {
 					    number: num,

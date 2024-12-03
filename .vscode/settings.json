@@ -1,3 +1,8 @@
 {
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.port": 5503,
+    "search.useGlobalIgnoreFiles": false,
+    "cSpell.words": [
+        "Kolkata"
+    ]
 }

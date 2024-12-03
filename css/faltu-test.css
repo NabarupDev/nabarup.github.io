@@ -1,0 +1,40 @@
+
+
+
+        h2 span {
+            color: #007bff; /* Highlighted text color */
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Form Group Styles */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Curved Input and Textarea Styles */
+        .form-contol {
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            box-shadow: none;
+            width: 350px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 15px;
+        }
+
+        .form-contol::placeholder {
+            color: #888; /* Light grey color for placeholder text */
+        }
+
+        .form-contol:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+            outline: none;
+        }
